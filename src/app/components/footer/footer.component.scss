@@ -1,0 +1,72 @@
+section {
+  background-color: #b52d21;
+  padding: 2vw 4vw;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  width: 11vw;
+  align-items: center;
+  img {
+    width: 12vw;
+  }
+  span {
+    color: #ffff;
+    font-size: 0.8vw;
+    text-align: center;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  h1 {
+    color: #ffff;
+    font-size: 1vw;
+  }
+  .icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffff;
+    img {
+      width: 2vw;
+      height: 2vw;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.franchise {
+  display: flex;
+  color: #ffff;
+  flex-direction: column;
+  line-height: 0;
+  h1 {
+    align-self: center;
+  }
+  .content {
+    display: flex;
+    gap: 1vw;
+  }
+  .franc {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      align-self: center;
+    }
+    .iframe {
+      width: 20vw;
+      height: 12vw;
+    }
+  }
+}

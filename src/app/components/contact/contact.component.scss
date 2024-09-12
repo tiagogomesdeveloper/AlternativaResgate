@@ -1,0 +1,82 @@
+@import "../../../assets/scss/variables";
+
+section {
+  display: flex;
+  padding: 0 4vw;
+  font-family: "Poppins", sans-serif;
+}
+
+.form {
+  flex: 1;
+}
+
+.bg-img {
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  color: #b52d21;
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    h1 {
+      text-wrap: nowrap;
+    }
+    img {
+      width: 8vw;
+    }
+  }
+  span {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2;
+    img {
+      width: 30px;
+    }
+    .invert {
+      transform: rotate(180deg) !important;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+.btn-size {
+  width: 40vw;
+  text-align: center;
+}
+
+@keyframes float {
+  0% {
+    background-position: center center;
+  }
+  25% {
+    background-position: calc(50% + 5px) calc(50% + 5px);
+  }
+  50% {
+    background-position: calc(50% - 5px) calc(50% - 5px);
+  }
+  75% {
+    background-position: calc(50% + 5px) calc(50% - 5px);
+  }
+  100% {
+    background-position: calc(50% - 5px) calc(50% + 5px);
+  }
+}
+
+@media screen and (max-width: $break-mobile) {
+  .bg-img {
+    display: none;
+  }
+
+  .btn-size,
+  input textarea.formulario {
+    width: 86vw;
+    font-size: 4vw;
+  }
+}

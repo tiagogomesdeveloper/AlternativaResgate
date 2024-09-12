@@ -1,0 +1,37 @@
+@import "../../../assets/scss/variables";
+
+section {
+  height: 12vh;
+  position: fixed;
+  z-index: 30;
+  right: 0;
+  top: 80%;
+  transform: translateY(-80%);
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  margin: 0.4vw;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  img {
+    width: 2vw;
+    height: 2vw;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+@media screen and (max-width: $break-mobile) {
+  .icon {
+    margin: 1vw ;
+    img {
+      width: 8vw;
+      height: 8vw;
+    }
+  }
+}

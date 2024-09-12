@@ -1,0 +1,16 @@
+<section>
+  <div class="slider">
+    <!-- Fotos originais -->
+    <div class="widget-photo" *ngFor="let photo of photosSlide">
+      <img [src]="photo.src" alt="">
+    </div>
+    <!-- Duplicação das fotos para criar o loop -->
+    <div class="widget-photo" *ngFor="let photo of photosSlide">
+      <img [src]="photo.src" alt="">
+    </div>
+    <!-- Triplicação das fotos para criar um loop contínuo -->
+    <div class="widget-photo" *ngFor="let photo of photosSlide">
+      <img [src]="photo.src" alt="">
+    </div>
+  </div>
+</section>

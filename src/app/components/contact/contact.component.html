@@ -1,0 +1,72 @@
+<section>
+  <div class="form">
+    <div class="container">
+      <div class="title">
+        <h2>Vamos conversar?</h2>
+        <p>
+          Preencha os dados abaixo e em 24 horas nossa equipe entrará em contato
+          com o seu whatsapp.
+        </p>
+      </div>
+      <input
+        spellcheck="false"
+        type="text"
+        id="contato_nome"
+        placeholder="Qual seu nome?"
+        [(ngModel)]="contato.nome"
+        required
+      />
+      <input
+        spellcheck="false"
+        type="email"
+        id="contato_email"
+        placeholder="Qual seu email?"
+        [(ngModel)]="contato.email"
+      />
+      <input
+        spellcheck="false"
+        type="tel"
+        id="contato_wpp"
+        placeholder="Qual seu whatsapp?"
+        [(ngModel)]="contato.whatsapp"
+        required
+      />
+      <input
+        spellcheck="false"
+        type="text"
+        id="contato_empresa"
+        placeholder="Qual sua empresa?"
+        [(ngModel)]="contato.empresa"
+      />
+      <textarea
+        class="formulario"
+        rows="8"
+        id="contato_mensagem"
+        spellcheck="false"
+        placeholder="Mensagem..."
+        [(ngModel)]="contato.mensagem"
+        required
+      ></textarea>
+      <div class="btn-class btn-size" (click)="sendForm()">Enviar</div>
+      <p id="send_return" class="aviso">{{ aviso }}</p>
+    </div>
+  </div>
+  <div class="bg-img">
+    <div class="title">
+      <img src="../../../assets/images/photo-president.png" alt="" />
+      <h1>O que diz nosso presidente?</h1>
+    </div>
+    <span>
+      <img class="invert" src="../../../assets/icons/aspas.png" alt="" /> Na
+      Alternativa Resgate, cada vida que transportamos é uma responsabilidade
+      que levamos muito a sério. Nossa missão é oferecer não apenas transporte
+      seguro e eficiente, mas também conforto e confiança para nossos pacientes
+      e suas famílias. Estamos comprometidos com a excelência em cada
+      atendimento, garantindo que cada cliente receba o cuidado e a atenção que
+      merece. Nosso compromisso com a segurança e a empatia é o que nos move, e
+      estamos aqui para oferecer suporte e tranquilidade em cada passo do
+      caminho.<img src="../../../assets/icons/aspas.png" alt="" />
+      <h1>Fernando Claro</h1>
+    </span>
+  </div>
+</section>

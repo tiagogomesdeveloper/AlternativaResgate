@@ -1,0 +1,36 @@
+section {
+  padding: 1vw 4vw;
+  display: flex;
+  overflow: hidden; /* Para esconder as fotos que estão fora da área visível */
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  width: 300vw;
+  gap: 10px;
+  animation: slide 40s linear infinite;
+}
+
+.widget-photo {
+  width: 30vw;
+  height: 18vw;
+  border-radius: 0px 10px;
+  flex-shrink: 0;
+}
+
+.widget-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  object-position: center;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-90%);
+  }
+}

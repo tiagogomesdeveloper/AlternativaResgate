@@ -1,0 +1,66 @@
+@import "../../../assets/scss/variables";
+
+section {
+  padding: 0 4vw;
+  font-family: "Poppins", sans-serif;
+  background-image: url(../../../assets/images/bg-history.png);
+  background-size: contain;
+}
+
+.container {
+  display: flex;
+  .content-img {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    img {
+      width: 30vw;
+      height: 30vw;
+    }
+  }
+  .right {
+    justify-content: left !important;
+  }
+  .span-2 {
+    text-align: right;
+  }
+
+  .content-span {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    span {
+      font-size: 1.2vw;
+      padding: 8vw;
+      h1 {
+        color: #b52d21;
+      }
+    }
+  }
+}
+
+.line-right {
+  display: flex;
+  justify-content: center;
+  margin-top: -9vw;
+  z-index: -1;
+  img {
+    width: 35vw;
+  }
+}
+
+.section-2 {
+  margin-top: -8vw;
+}
+
+@media screen and (max-width: $break-mobile) {
+  .container .content-span span {
+      padding: 2vw;
+      font-size: 8px;
+      h1 {
+        color: #b52d21;
+
+    }
+  }
+}

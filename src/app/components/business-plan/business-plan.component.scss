@@ -1,0 +1,63 @@
+@import "../../../assets/scss/variables";
+
+section {
+  padding: 1vw 4vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: "Poppins", sans-serif;
+  gap: 15px;
+}
+
+.widget-plan {
+  width: 320px;
+  padding: 2vw;
+  border-radius: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #b52d21;
+  background-color: #eaeaf462;
+  animation: fadeIn 3s ease forwards;
+  &:hover {
+    background-color: #eaeaf4;
+    box-shadow: 10px 10px 30px 0px rgb(0, 0, 0, 0.1);
+  }
+  h3 {
+    margin-right: auto;
+    font-size: 20px;
+  }
+}
+
+.itens-plan {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1vw;
+  align-items: center;
+  margin-right: auto;
+  margin-bottom: 40px;
+  span {
+    font-size: 15px;
+  }
+}
+
+.btn-position {
+  margin-block-start: auto;
+}
+
+@media screen and (max-width: $break-mobile) {
+.btn-position {
+  font-size: 4vw;
+}
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(120);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

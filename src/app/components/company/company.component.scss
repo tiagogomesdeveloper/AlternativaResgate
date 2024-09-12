@@ -1,0 +1,70 @@
+@import "../../../assets/scss/variables";
+
+section {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+}
+
+.img-company {
+  background-image: url(../../../assets/images/bg-company.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  span {
+    margin: 1vw 4vw;
+    text-align: center;
+    color: #b52d21;
+    font-weight: 600;
+    font-size: 1vw;
+  }
+}
+
+.info-company {
+  flex: 1;
+  align-content: center;
+  margin-right: 3vw;
+  h1 {
+    margin: 1vw;
+    color: #b52d21;
+  }
+}
+
+.widget {
+  border: 1px solid #b52d21;
+  border-radius: 1vw;
+  display: flex;
+  padding: 1vw;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  margin: 1vw;
+  img {
+    width: 3vw;
+    height: 3vw;
+  }
+  .title {
+    h3 {
+      font-size: 0.9vw;
+      margin: 0;
+      color: #b52d21;
+    }
+    span {
+      font-size: 0.9vw;
+    }
+  }
+}
+
+@media screen and (max-width: $break-mobile) {
+  .widget .title span {
+    font-size: 1.5vw;
+    display: inline-block;
+  }
+
+  .img-company span {
+      margin: 6vw 4vw;
+    }
+
+}

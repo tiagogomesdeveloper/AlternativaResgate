@@ -1,0 +1,87 @@
+@import "../../../assets/scss/variables";
+
+section {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(../../../assets/images/bg-top1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 92vh;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+.bg-top {
+  flex: 1;
+  background-image: url(../../../assets/images/photo-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.text-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  margin-top: 7vw;
+  padding: 0 4vw;
+  gap: 2vw;
+  z-index: 2;
+  position: relative;
+  .title {
+    font-weight: 600;
+    font-size: 5vw;
+    color: #ffffff;
+    line-height: 4vw;
+  }
+  .subtitle {
+    font-weight: 600;
+    font-size: 1.4vw;
+    color: #ffffff;
+    margin-bottom: 2vw;
+    a {
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #b52d21;
+    }
+  }
+}
+
+@media screen and (max-width: $break-mobile) {
+  section {
+    flex-direction: column;
+    height: 72vh;
+  }
+
+  .bg-top {
+    order: 1;
+    height: 50vh;
+  }
+
+  .text-btn {
+   height: inherit;
+   flex: none;
+   margin-top: 0;
+   background-image: url(../../../assets/images/photo-bg-opacity.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   z-index: 1;
+    .title {
+      font-size: 12vw;
+      line-height: 10vw;
+    }
+
+    .subtitle {
+      font-size: 6vw;
+    }
+
+    .btn-class {
+      padding: 2vw 4vw;
+      font-size: 3vw;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<nav>
+  <img class="logo" src="../../../assets/icons/icon-white-150x150.png" alt="" (click)="onButtonClick('top')"/>
+  <img class="icon-menu-mobile" src="../../../assets/icons/menu-mobile.svg" alt="" (click)="toogleMenuMobile()">
+
+  <div class="itens-menu">
+    <span (click)="onButtonClick('top')">Home</span>
+    <span (click)="onButtonClick('company')">Empresa</span>
+    <span (click)="onButtonClick('services')">Serviços</span>
+    <span (click)="onButtonClick('history')">História</span>
+    <span (click)="onButtonClick('contact')">Contato</span>
+    <div  class="btn-class animation btn-mobile" (click)="onButtonClick('business-plan')">CONTRATAR AGORA</div>
+  </div>
+
+  <div class="mobile-menu" *ngIf="menuActive">
+    <span (click)="onButtonClick('top')">Home</span>
+    <span (click)="onButtonClick('company')">Empresa</span>
+    <span (click)="onButtonClick('services')">Serviços</span>
+    <span (click)="onButtonClick('history')">História</span>
+    <span (click)="onButtonClick('contact')">Contato</span>
+    <div  class="btn-class animation btn-mobile" (click)="onButtonClick('business-plan')">CONTRATAR AGORA</div>
+  </div>
+</nav>
