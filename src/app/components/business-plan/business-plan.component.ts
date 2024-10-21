@@ -6,27 +6,57 @@ import { Component } from '@angular/core';
   styleUrls: ['./business-plan.component.scss'],
 })
 export class BusinessPlanComponent {
-  sendPlan(value: number) {
-    let plan: string = '';
-    switch (value) {
-      case 1:
-        plan = 'PLANO PESSOAL';
-        break;
-      case 2:
-        plan = 'PLANO FAMÍLIA';
-        break;
-      case 3:
-        plan = 'PLANO EMPRESA';
-        break;
+  services = [
+    {
+      description: 'Tele Medicina',
+      isSelected: false,
+    },
+    {
+      description: 'Agendar remoção básica',
+      isSelected: false,
+    },
+    {
+      description: 'Agendar remoção avançada (UTI)',
+      isSelected: false,
+    },
+    {
+      description: 'Transporte aéreo médico',
+      isSelected: false,
+    },
+    {
+      description: 'Cobertura médica em evento',
+      isSelected: false,
+    },
+    {
+      description: 'Aluguel de ambulâncias',
+      isSelected: false,
+    },
+    {
+      description: 'Palestras',
+      isSelected: false,
+    },
+    {
+      description: 'Treinamentos',
+      isSelected: false,
+    },
+  ];
+  sendPlan() {
+    const selectedServices = this.services
+      .filter((service) => service.isSelected)
+      .map((service) => service.description)
+      .join(', ');
 
-      default:
-        break;
+    if (selectedServices.length === 0) {
+      alert('Por favor, selecione pelo menos um serviço.');
+      return;
     }
 
-    const msg = `Olá, tenho interesse em contratar o ${plan}.`;
+    const msg = `Olá, tenho interesse em contratar os seguintes serviços: ${selectedServices}.`;
     const whatsappUrl = `https://wa.me/5516997249285?text=${encodeURIComponent(
       msg
     )}`;
     window.open(whatsappUrl, '_blank');
+
+    this.services.map((x) => (x.isSelected = false));
   }
 }

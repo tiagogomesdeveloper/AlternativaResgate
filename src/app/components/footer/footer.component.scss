@@ -1,3 +1,5 @@
+@import "../../../assets/scss/variables";
+
 section {
   background-color: #b52d21;
   padding: 2vw 4vw;
@@ -67,6 +69,14 @@ section {
     .iframe {
       width: 20vw;
       height: 12vw;
+    }
+  }
+}
+
+@media screen and (max-width: $break-mobile) {
+  .franchise {
+    .content {
+      flex-direction: column;
     }
   }
 }
