@@ -1,0 +1,26 @@
+/* Estilo inicial para ocultar os elementos */
+.animated-1, .animated-2 {
+  opacity: 0;
+  transition: opacity 3s ease, transform 0.5s ease;
+}
+
+/* Efeito para animated-1 */
+.animated-1 {
+  transform: translateX(-50%); /* Deslocamento inicial para animated-1 */
+}
+
+.animated-1.visible {
+  opacity: 1;
+  transform: translateX(0); /* Retorna ao seu lugar original */
+}
+
+/* Efeito para animated-2 */
+.animated-2 {
+  transform: translateY(-70%); /* Deslocamento inicial para animated-2 */
+  opacity: 0;
+}
+
+.animated-2.visible {
+  opacity: 1;
+  transform: translateY(0); /* Retorna ao seu lugar original */
+}

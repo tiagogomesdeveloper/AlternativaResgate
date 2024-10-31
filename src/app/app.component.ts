@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
+import { AnimationService } from 'src/styles/animation.service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   mostrarAvisoCookie: boolean = false;
+
+  constructor(
+    private el: ElementRef,
+    private animationService: AnimationService
+  ) {}
 
   ngOnInit() {
     this.habilitarCarregamentoDivCookie();
@@ -32,5 +38,14 @@ export class AppComponent {
   fecharAvisoCookie() {
     localStorage.setItem('cookie', 'true');
     this.mostrarAvisoCookie = false;
+  }
+
+  ngAfterViewInit() {
+    const animatedElements = this.el.nativeElement.querySelectorAll(
+      '.animated-1, .animated-2'
+    );
+    animatedElements.forEach((element: HTMLElement) => {
+      this.animationService.observe(element);
+    });
   }
 }

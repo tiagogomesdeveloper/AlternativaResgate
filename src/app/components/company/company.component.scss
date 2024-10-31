@@ -57,7 +57,7 @@ section {
   }
 }
 
-@media screen and (max-width: $break-mobile) {
+@media screen and (min-width: $break-mobile) {
   .widget .title span {
     font-size: 1.5vw;
     display: inline-block;

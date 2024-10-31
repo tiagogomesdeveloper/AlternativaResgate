@@ -13,6 +13,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { BusinessPlanComponent } from './components/business-plan/business-plan.component';
 import { FormsModule } from '@angular/forms';
 import { PhotosSlideComponent } from './components/photos-slide/photos-slide.component';
+import { AnimationService } from 'src/styles/animation.service';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +29,13 @@ import { PhotosSlideComponent } from './components/photos-slide/photos-slide.com
     ContactComponent,
     BusinessPlanComponent,
     PhotosSlideComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AnimationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

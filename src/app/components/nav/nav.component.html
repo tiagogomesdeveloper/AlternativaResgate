@@ -1,0 +1,60 @@
+<section>
+  <div class="tollbar"></div>
+  <div class="bg-style">
+    <div class="line-1"></div>
+    <div class="line-2">
+      <div class="circle">
+        <div class="icon-content">
+          <img src="./../../../assets/icons/icon-white-150x150.png" alt="" />
+        </div>
+      </div>
+      <div class="content-menu">
+        <div class="content-name">
+          <span class="name-1">Alternativa</span
+          ><span class="name-2">Resgate+</span>
+        </div>
+
+        <!-- Menu Desktop -->
+        <div class="menu">
+          <span (click)="onButtonClick('top')">Home <b>+</b></span>
+          <span (click)="onButtonClick('company')">Empresa <b>+</b></span>
+          <span (click)="onButtonClick('services')">Serviços <b>+</b></span>
+          <span (click)="onButtonClick('history')">História <b>+</b></span>
+          <span (click)="onButtonClick('contact')">Contato <b>+</b></span>
+          <div
+            class="btn-class animation"
+            (click)="onButtonClick('business-plan')"
+          >
+            Contratar Agora
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toobar-mobile">
+    <div class="set-menu">
+      <div class="content-name">
+        <div class="icon-content-mobile">
+          <img src="./../../../assets/icons/icon-white-150x150.png" alt="" />
+        </div>
+        <span class="name-1">Alternativa</span
+        ><span class="name-2">Resgate+</span>
+      </div>
+      <div class="menu-toggle" (click)="toggleMobileMenu()">☰</div>
+    </div>
+    <div class="mobile-menu" *ngIf="isMobileMenuOpen">
+      <span (click)="onButtonClick('top')">Home <b>+</b></span>
+      <span (click)="onButtonClick('company')">Empresa <b>+</b></span>
+      <span (click)="onButtonClick('services')">Serviços <b>+</b></span>
+      <span (click)="onButtonClick('history')">História <b>+</b></span>
+      <span (click)="onButtonClick('contact')">Contato <b>+</b></span>
+      <div
+        class="btn-class animation btn-mobile"
+        (click)="onButtonClick('business-plan')"
+      >
+        Contratar Agora
+      </div>
+    </div>
+  </div>
+</section>

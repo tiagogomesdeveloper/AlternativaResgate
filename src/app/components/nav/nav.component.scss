@@ -1,0 +1,261 @@
+section {
+  background-color: transparent;
+  height: 165px;
+  display: flex;
+}
+
+.tollbar {
+  background-color: #d6d6d6;
+  width: 100%;
+  position: absolute;
+  height: 55px;
+}
+
+.bg-style {
+  margin-top: 22px;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  position: relative;
+}
+
+.bg-style .line-1 {
+  background-color: #ffffff;
+  width: 18%;
+  margin-bottom: 3vh;
+}
+
+.bg-style .line-2 {
+  width: 82%;
+  height: 80%;
+  background-color: #ffffff;
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bg-style .circle {
+  position: fixed;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-left: -95px;
+  background-color: #ffffff;
+  margin-top: -29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.bg-style .circle .icon-content {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-style .circle .icon-content img {
+  width: 75%;
+  height: 60%;
+  margin-right: 5px;
+  animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+.bg-style .content-menu {
+  width: 100%;
+  margin-left: 60px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 100px;
+}
+
+.bg-style .content-menu .content-name {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.bg-style .content-menu .content-name .name-1 {
+  color: #ff0000;
+}
+
+.bg-style .content-menu .content-name .name-2 {
+  color: #f77b7b;
+}
+
+.bg-style .content-menu .menu {
+  display: flex;
+  gap: 40px;
+  font-weight: 700;
+  font-size: 20px;
+  align-items: center;
+}
+
+.bg-style .content-menu .menu span {
+  cursor: pointer;
+  transition: font-size 0.2s ease, color 0.2s ease;
+}
+
+.bg-style .content-menu .menu span:hover {
+  font-size: 22px;
+  color: #f77b7b;
+}
+
+.bg-style .content-menu .menu b {
+  color: #ff0000;
+}
+
+.btn-mobile {
+  font-size: 14px;
+}
+
+span {
+  font-family: "Roboto Slab", serif;
+}
+
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1464px) {
+  .bg-style .line-2,
+  .bg-style .content-menu {
+    justify-content: space-between;
+    padding-right: 10px;
+  }
+
+  .bg-style .content-menu .menu {
+    gap: 20px;
+  }
+
+  .bg-style .content-menu .menu span {
+    font-size: 16px;
+  }
+
+  .bg-style .content-menu .menu span:hover {
+    font-size: 18px;
+  }
+}
+
+//////////////////////////////////////
+
+.toobar-mobile {
+  display: none;
+}
+.menu-toggle {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+  background-color: #ffffff;
+
+  width: 100%;
+  padding: 10px;
+  z-index: 2;
+
+  span {
+    display: block;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+}
+
+.icon-content-mobile {
+  width: 50px;
+  height: 50px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  img {
+    margin-right: 5px;
+    width: 35px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .tollbar,
+  .bg-style {
+    display: none;
+  }
+
+  .toobar-mobile {
+    display: block;
+  }
+
+  .toobar-mobile .set-menu .content-name .name-1 {
+    font-size: 22px;
+    color: #ff0000;
+  }
+
+  .toobar-mobile .set-menu .content-name .name-2 {
+    font-size: 22px;
+    color: #f77b7b;
+  }
+
+  .toobar-mobile {
+    background-color: #ffff;
+    width: 100%;
+    padding: 20px;
+    height: max-content;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .content-menu .menu {
+    display: none;
+  }
+
+  .content-name {
+    display: flex;
+    align-items: center;
+  }
+
+  .set-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 30px;
+    color: #f77b7b;
+  }
+}
+
