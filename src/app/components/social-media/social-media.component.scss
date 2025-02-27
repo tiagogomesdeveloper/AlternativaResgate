@@ -16,9 +16,9 @@ section {
   cursor: pointer;
   display: flex;
   flex-direction: row-reverse;
-  img {
-    width: 2vw;
-    height: 2vw;
+  i {
+    font-size: 28px;
+    color: rgb(95, 18, 18);
 
     &:hover {
       transform: scale(1.05);

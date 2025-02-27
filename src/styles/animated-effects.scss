@@ -1,5 +1,5 @@
 /* Estilo inicial para ocultar os elementos */
-.animated-1, .animated-2 {
+.animated-1, .animated-2, .animated-3 {
   opacity: 0;
   transition: opacity 3s ease, transform 0.5s ease;
 }
@@ -23,4 +23,13 @@
 .animated-2.visible {
   opacity: 1;
   transform: translateY(0); /* Retorna ao seu lugar original */
+}
+
+.animated-3 {
+  transform: translateX(0%); /* Deslocamento inicial para animated-1 */
+}
+
+.animated-3.visible {
+  opacity: 1;
+  transform: translateX(0); /* Retorna ao seu lugar original */
 }

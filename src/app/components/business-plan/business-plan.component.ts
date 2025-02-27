@@ -16,7 +16,7 @@ export class BusinessPlanComponent {
       isSelected: false,
     },
     {
-      description: 'Agendar remoção avançada (UTI)',
+      description: 'Remoção avançada (UTI)',
       isSelected: false,
     },
     {

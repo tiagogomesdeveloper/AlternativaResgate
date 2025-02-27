@@ -1,3 +1,5 @@
+@import "../../../assets/scss/variables";
+
 section {
   background-color: transparent;
   height: 165px;
@@ -145,7 +147,7 @@ span {
   }
 }
 
-@media screen and (min-width: 720px) and (max-width: 1464px) {
+@media screen and (min-width: 720px) and (max-width: 1600px) {
   .bg-style .line-2,
   .bg-style .content-menu {
     justify-content: space-between;
@@ -165,8 +167,6 @@ span {
   }
 }
 
-//////////////////////////////////////
-
 .toobar-mobile {
   display: none;
 }
@@ -183,9 +183,14 @@ span {
   z-index: 2;
 
   span {
-    display: block;
     padding: 10px 0;
     cursor: pointer;
+    width: 100%;
+    text-align: center;
+    &:hover {
+      background-color: #ff0000;
+      color: #ffffff;
+    }
   }
 }
 
@@ -205,7 +210,7 @@ span {
   }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: $break-tablet-max) {
   .tollbar,
   .bg-style {
     display: none;
@@ -230,10 +235,16 @@ span {
     width: 100%;
     padding: 20px;
     height: max-content;
+    display: flex;
+    flex-direction: column;
   }
 
   .mobile-menu {
-    display: block;
+    justify-items: center;
+    gap: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: anchor-center;
   }
 
   .content-menu .menu {
@@ -258,4 +269,3 @@ span {
     color: #f77b7b;
   }
 }
-

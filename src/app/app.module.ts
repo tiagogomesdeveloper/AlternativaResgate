@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { PhotosSlideComponent } from './components/photos-slide/photos-slide.component';
 import { AnimationService } from 'src/styles/animation.service';
 import { NavComponent } from './components/nav/nav.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NavComponent } from './components/nav/nav.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [AnimationService],
   bootstrap: [AppComponent]

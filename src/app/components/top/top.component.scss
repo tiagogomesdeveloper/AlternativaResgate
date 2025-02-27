@@ -6,7 +6,7 @@ section {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 92vh;
+  height: 102vh;
   display: flex;
   font-family: "Poppins", sans-serif;
   position: relative;
@@ -18,70 +18,87 @@ section {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  z-index: 1;
 }
 
-.text-btn {
+.container {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+.content {
+  flex: 1;
+  margin-top: 165px;
+  display: flex;
+  flex: 1;
+  margin-top: 130px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  flex: 1;
-  margin-top: 7vw;
-  padding: 0 4vw;
-  gap: 2vw;
-  z-index: 2;
-  position: relative;
-  .title {
-    font-weight: 600;
-    font-size: 5vw;
-    color: #ffffff;
-    line-height: 4vw;
-  }
-  .subtitle {
-    font-weight: 600;
-    font-size: 1.4vw;
-    color: #ffffff;
-    margin-bottom: 2vw;
-    a {
-      text-transform: uppercase;
-      font-weight: 700;
-      color: #b52d21;
-    }
+  justify-content: space-evenly;
+  padding: 65px;
+  gap: 26px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 4vw;
+  color: #ffffff;
+  line-height: 4vw;
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 1.8vw;
+  color: #ffffff;
+  a {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #b52d21;
   }
 }
 
-@media screen and (max-width: $break-mobile) {
+@media screen and (max-width: $break-tablet-max) {
   section {
-    flex-direction: column;
-    height: 72vh;
+    display: block;
   }
 
   .bg-top {
-    order: 1;
-    height: 50vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
   }
 
-  .text-btn {
-   height: inherit;
-   flex: none;
-   margin-top: 0;
-   background-image: url(../../../assets/images/photo-bg-opacity.png);
-   background-repeat: no-repeat;
-   background-position: center;
-   background-size: cover;
-   z-index: 1;
-    .title {
-      font-size: 12vw;
-      line-height: 10vw;
-    }
+  .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(88, 27, 27, 0.795);
+  }
+  .content {
+    margin-top: 90px;
+    padding: 10px;
+  }
 
-    .subtitle {
-      font-size: 6vw;
+  .title {
+    font-weight: 600;
+    font-size: 14vw;
+    color: #ffffff;
+    line-height: 13vw;
+  }
+  .subtitle {
+    font-size: 6.4vw;
+    a {
+      text-shadow: 2px 1px 1px #ffff;
     }
-
-    .btn-class {
-      padding: 2vw 4vw;
-      font-size: 3vw;
-    }
+  }
+  .btn-class {
+    padding: 2vw 5vw;
+    font-size: 3vw;
   }
 }

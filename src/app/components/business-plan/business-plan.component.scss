@@ -40,7 +40,7 @@ section {
   cursor: pointer;
   justify-content: center;
   span {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .service-selected {
@@ -69,6 +69,12 @@ section {
 
 .btn-position {
   margin-block-start: auto;
+}
+
+@media screen and (max-width: $break-tablet-max) {
+.itens-plan {
+
+}
 }
 
 

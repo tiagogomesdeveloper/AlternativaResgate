@@ -3,29 +3,27 @@
 section {
   display: flex;
   font-family: "Poppins", sans-serif;
+  padding: 10px;
+  place-items: center;
 }
 
 .img-company {
-  background-image: url(../../../assets/images/bg-company.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   flex: 1;
-  display: flex;
-  align-items: flex-end;
+  img {
+    width: 100%;
+  }
   span {
-    margin: 1vw 4vw;
-    text-align: center;
+    padding: 0px 2vw;
     color: #b52d21;
     font-weight: 600;
-    font-size: 1vw;
+    font-size: 2vh;
+    display: flex;
+    text-align: center;
   }
 }
 
 .info-company {
   flex: 1;
-  align-content: center;
-  margin-right: 3vw;
   h1 {
     margin: 1vw;
     color: #b52d21;
@@ -37,13 +35,14 @@ section {
   border-radius: 1vw;
   display: flex;
   padding: 1vw;
-  justify-content: center;
   align-items: center;
-  gap: 1vw;
+  gap: 2vw;
   margin: 1vw;
-  img {
-    width: 3vw;
-    height: 3vw;
+  .icon {
+    img {
+      width: 60px;
+      height: 60px;
+    }
   }
   .title {
     h3 {
@@ -57,14 +56,56 @@ section {
   }
 }
 
-@media screen and (min-width: $break-mobile) {
-  .widget .title span {
-    font-size: 1.5vw;
-    display: inline-block;
+@media screen and (max-width: $break-tablet-max) {
+  section {
+    flex-direction: column;
+  }
+  .img-company {
+    position: relative;
+    img {
+      opacity: 0.1;
+    }
+    span {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      padding: 0 100px;
+      font-size: 2vh;
+      top: 0;
+      align-content: center;
+      text-shadow: 1px 0px 9px #a511117a;
+      color: rgb(32, 32, 32);
+      align-items: center;
+    }
   }
 
-  .img-company span {
-      margin: 6vw 4vw;
+  .widget {
+    .title {
+      h3 {
+        font-size: 15px;
+      }
+      span {
+        font-size: 12px;
+      }
     }
+  }
+}
 
+@media screen and (max-width: $break-mobile) {
+  .img-company {
+    span {
+      padding: 0;
+    }
+  }
+  .widget {
+    .title {
+      h3 {
+        font-size: 10px;
+      }
+      span {
+        font-size: 8px;
+      }
+    }
+  }
 }

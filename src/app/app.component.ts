@@ -42,7 +42,7 @@ export class AppComponent {
 
   ngAfterViewInit() {
     const animatedElements = this.el.nativeElement.querySelectorAll(
-      '.animated-1, .animated-2'
+      '.animated-1, .animated-2, animated-3'
     );
     animatedElements.forEach((element: HTMLElement) => {
       this.animationService.observe(element);
